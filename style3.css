@@ -1,0 +1,50 @@
+body {
+    background-image: url('15.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+a {
+    display: inline-block;
+    margin: 20px;
+    position: relative;
+    transition: transform 0.5s ease-in-out;
+}
+
+a:hover {
+    transform: translateY(-20px) rotate(5deg);
+}
+
+img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(20px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+a:nth-child(1) img {
+    animation: slide 4s infinite alternate;
+}
+
+a:nth-child(2) img {
+    animation: slide 4s infinite alternate-reverse;
+}
